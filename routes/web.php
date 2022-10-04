@@ -1,5 +1,6 @@
 <?php
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\BooksController;
 use Illuminate\Support\Facades\{Route,Auth};
 
 /*
@@ -14,7 +15,7 @@ use Illuminate\Support\Facades\{Route,Auth};
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
 
 Auth::routes(['verify' => true]);
@@ -24,3 +25,9 @@ Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('/index', function(){
     return view('index');
 });
+
+Route::get('/Perpustakaan', function(){
+    return view('Perpustakaan/Perpustakaan');
+});
+
+Route::get('/Buku', [BooksController::class, 'index']);

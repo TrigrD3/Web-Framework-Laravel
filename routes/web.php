@@ -30,4 +30,8 @@ Route::get('/Perpustakaan', function(){
     return view('Perpustakaan/Perpustakaan');
 });
 
-Route::get('/Buku', [BooksController::class, 'index']);
+Route::get('/Buku', [BooksController::class, 'index'])-> name('Perpustakaan.Buku');
+
+Route::get('Buku/{id}', [BooksController::class, 'show'])->name('Perpustakaan.show');
+Route::put('Buku/{id}/edit', [BooksController::class, 'edit'])->name('Perpustakaan.edit');
+Route::delete('Buku/{id}/delete', [BooksController::class, 'destroy'])->name('Perpustakaan.destroy');

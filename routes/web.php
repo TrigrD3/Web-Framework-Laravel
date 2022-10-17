@@ -1,6 +1,9 @@
 <?php
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\BooksController;
+use App\Http\Controllers\DosenController;
+use App\Http\Controllers\JadwalController;
+use App\Http\Controllers\MataKuliahController;
 use Illuminate\Support\Facades\{Route,Auth};
 
 /*
@@ -27,8 +30,17 @@ Route::get('/index', function(){
 });
 
 Route::get('/Perpustakaan', function(){
-    return view('Perpustakaan/Perpustakaan');
+    return view('Perpustakaan/index');
 });
+
+
+Route::get('/Dosen', [DosenController::class, 'index'])-> name('Dosen.index');
+
+Route::get('/Jadwal', [JadwalController::class, 'index'])-> name('Jadwal.index');
+Route::get('/MataKuliah', [MataKuliahController::class, 'index'])-> name('MataKuliah.index');
+
+
+
 
 Route::get('/Buku', [BooksController::class, 'index'])-> name('Perpustakaan.Buku');
 

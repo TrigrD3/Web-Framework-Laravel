@@ -53,18 +53,18 @@
                             @endif
                         @else
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ url('/Perpustakaan') }}">
-                                    {{ __('Perpustakaan') }}</a>
+                                <a class="nav-link" href="{{ url('/MataKuliah') }}">
+                                    {{ __('Mata Kuliah') }}</a>
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ url('/LayananMedis') }}">
-                                    {{ __('Layanan Medis') }}</a>
+                                <a class="nav-link" href="{{ url('/Dosen') }}">
+                                    {{ __('Dosen') }}</a>
                             </li>
                             
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ url('/LayananKoperasi') }}">
-                                    {{ __('Layanan Koperasi') }}</a>
+                                <a class="nav-link" href="{{ url('/Jadwal') }}">
+                                    {{ __('Jadwal') }}</a>
                             </li>
                             
                             <li class="nav-item dropdown">

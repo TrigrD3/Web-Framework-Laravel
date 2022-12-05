@@ -16,8 +16,8 @@
 
     @foreach ($dosens as $dosen)
     <tr>
-      <th scope="row">{{ $dosen->id_dosen }}</th>
-      <td>{{ $dosen->nama_dosen }}</td>
+      <th scope="row">{{ $dosen->id }}</th>
+      <td><a href="Jadwal/{{ $dosen->nama_dosen }}">{{ $dosen->nama_dosen }}</a></td>
       <td>{{ $dosen->nip }}</td>
       <td>{{ $dosen->alamat }}</td>
     </tr>

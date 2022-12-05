@@ -12,4 +12,11 @@ class MataKuliah extends Model
     function getAllMataKuliah(){
         return MataKuliah::all();
     }
+
+    function mahasiswa(){
+        return $this -> hasManyThrough('App\Models\Matkul', 'App\Models\Mahasiswa', "id", "id_mk");
+    }
+
+
+
 }

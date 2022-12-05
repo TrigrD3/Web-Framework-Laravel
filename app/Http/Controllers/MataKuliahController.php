@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\MataKuliah;
+use App\Models\Matkul;
 use App\Http\Requests\StoreMataKuliahRequest;
 use App\Http\Requests\UpdateMataKuliahRequest;
 
@@ -15,10 +16,17 @@ class MataKuliahController extends Controller
      */
     public function index()
     {
-        $mks = new MataKuliah();
-        $data['mks'] = $mks->getAllMataKuliah();
+        $mk = new MataKuliah();
+        $data['mk'] = $mk->getAllMataKuliah();
         return view('MataKuliah.index', $data);
     }
+
+    // public function showMatkul()
+    // {
+    //     $mk = new Matkul();
+    //     $data['mk'] = $mk->getAllMatkul();
+    //     return view('MataKuliah.matkul', $data);
+    // }
 
     /**
      * Show the form for creating a new resource.
@@ -47,9 +55,17 @@ class MataKuliahController extends Controller
      * @param  \App\Models\MataKuliah  $mataKuliah
      * @return \Illuminate\Http\Response
      */
-    public function show(MataKuliah $mataKuliah)
+    public function show($id)
     {
         //
+        $matkul = new Matkul();
+        $matkul = Matkul::find($id);
+        if ($matkul === null) {
+            abort(404, "No book has been found.");
+        }
+        // use compact() to pass the variable to the view
+        return view('MataKuliah.matkul', compact('matkul'));
+
     }
 
     /**

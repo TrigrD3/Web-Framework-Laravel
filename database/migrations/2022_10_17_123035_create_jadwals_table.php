@@ -17,11 +17,11 @@ return new class extends Migration
             $table->id('id_jadwal');
             $table->unsignedBigInteger('id_mk');
  
-            $table->foreign('id_mk')->references('id_mk')->on('mata_kuliahs');
+            $table->foreign('id_mk')->references('id')->on('mata_kuliahs');
 
             $table->unsignedBigInteger('id_dosen');
  
-            $table->foreign('id_dosen')->references('id_dosen')->on('dosens');
+            $table->foreign('id_dosen')->references('id')->on('dosens');
             // $table->foreignId('id_mk')->constrained();
             // $table->foreignId('id_dosen')->constrained();
             $table->string('hari');

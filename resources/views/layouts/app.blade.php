@@ -66,6 +66,11 @@
                                 <a class="nav-link" href="{{ url('/Jadwal') }}">
                                     {{ __('Jadwal') }}</a>
                             </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ url('/Mahasiswa') }}">
+                                    {{ __('Mahasiswa') }}</a>
+                            </li>
                             
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>

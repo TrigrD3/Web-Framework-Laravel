@@ -14,9 +14,9 @@
   </thead>
   <tbody>
 
-    @foreach ($mks as $mk)
+    @foreach ($mk as $mk)
     <tr>
-      <th scope="row">{{ $mk->id_mk }}</th>
+      <th scope="row"><a href="MataKuliah/{{ $mk->nama_mk }}">{{ $mk->id }}</a></th>
       <td>{{ $mk->kode_mk }}</td>
       <td>{{ $mk->nama_mk }}</td>
       <td>{{ $mk->semester }}</td>

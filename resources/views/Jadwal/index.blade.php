@@ -18,12 +18,14 @@
     @foreach ($jadwals as $jadwal)
     <tr>
       <th scope="row">{{ $jadwal->id_jadwal }}</th>
-      <td>{{ $jadwal->id_dosen }}</td>
-      <td>{{ $jadwal->id_mk }}</td>
+      <td>{{ $jadwal->dosen->nama_dosen }}</td>
+      
+      <td>{{ $jadwal->mataKuliah->nama_mk }}</td>
       <td>{{ $jadwal->hari }}</td>
       <td>{{ $jadwal->jam }}</td>
     </tr>
     @endforeach
+
 
   </tbody>
 </table>

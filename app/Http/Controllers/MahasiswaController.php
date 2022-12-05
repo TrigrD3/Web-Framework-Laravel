@@ -2,14 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Dosen;
-use App\Models\Jadwal;
-use App\Models\MataKuliah;
-use Illuminate\Routing\Controller;
-use App\Http\Requests\StoreJadwalRequest;
-use App\Http\Requests\UpdateJadwalRequest;
+use App\Models\Mahasiswa;
+use App\Http\Requests\StoreMahasiswaRequest;
+use App\Http\Requests\UpdateMahasiswaRequest;
 
-class JadwalController extends Controller
+class MahasiswaController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -18,12 +15,10 @@ class JadwalController extends Controller
      */
     public function index()
     {
-        $jadwals = new Jadwal();
-        $data['jadwals'] = $jadwals->getAllJadwal();
-
-        return view('Jadwal.index', $data);
-        // $jadwals = Jadwal::all();
-        // return view('Jadwal.index', compact('jadwals'));
+        //
+        $mahasiswa = new Mahasiswa();
+        $data['mahasiswa'] = $mahasiswa->getAllMahasiswa();
+        return view('Mahasiswa.index', $data);
     }
 
     /**
@@ -39,10 +34,10 @@ class JadwalController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\StoreJadwalRequest  $request
+     * @param  \App\Http\Requests\StoreMahasiswaRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreJadwalRequest $request)
+    public function store(StoreMahasiswaRequest $request)
     {
         //
     }
@@ -50,21 +45,22 @@ class JadwalController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Jadwal  $jadwal
+     * @param  \App\Models\Mahasiswa  $mahasiswa
      * @return \Illuminate\Http\Response
      */
-    public function show(Jadwal $jadwal)
+    public function show(Mahasiswa $mahasiswa)
     {
         //
+
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Jadwal  $jadwal
+     * @param  \App\Models\Mahasiswa  $mahasiswa
      * @return \Illuminate\Http\Response
      */
-    public function edit(Jadwal $jadwal)
+    public function edit(Mahasiswa $mahasiswa)
     {
         //
     }
@@ -72,11 +68,11 @@ class JadwalController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\UpdateJadwalRequest  $request
-     * @param  \App\Models\Jadwal  $jadwal
+     * @param  \App\Http\Requests\UpdateMahasiswaRequest  $request
+     * @param  \App\Models\Mahasiswa  $mahasiswa
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateJadwalRequest $request, Jadwal $jadwal)
+    public function update(UpdateMahasiswaRequest $request, Mahasiswa $mahasiswa)
     {
         //
     }
@@ -84,10 +80,10 @@ class JadwalController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Jadwal  $jadwal
+     * @param  \App\Models\Mahasiswa  $mahasiswa
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Jadwal $jadwal)
+    public function destroy(Mahasiswa $mahasiswa)
     {
         //
     }
